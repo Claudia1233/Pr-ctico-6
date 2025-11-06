@@ -1,5 +1,5 @@
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #e9eef5;
   margin: 0;
   padding: 0;
@@ -26,7 +26,6 @@ body {
 h2 {
   color: #0077c8;
   text-align: center;
-  margin-bottom: 15px;
 }
 
 .instrucciones {
@@ -35,11 +34,6 @@ h2 {
   border-radius: 6px;
   padding: 10px 15px;
   margin-bottom: 15px;
-}
-
-.instrucciones h3 {
-  margin: 0 0 8px 0;
-  color: #1b7b56;
 }
 
 button {
@@ -68,7 +62,7 @@ button:hover {
   display: none;
 }
 
-/* 🎨 Clases para cada tipo de resultado */
+/* Colores según categoría */
 .antes {
   background-color: #fef6e4;
   border: 1px solid #f5d882;
