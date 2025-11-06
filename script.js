@@ -19,7 +19,7 @@ function ejecutarEjercicio() {
 
   // Cadena de if - else if - else ordenada correctamente
   if (valor < 100) {
-    resultado.textContent = `📉 El valor ${valor} está antes de los rangos.`;
+    resultado.textContent = ` El valor ${valor} está antes de los rangos.`;
     resultado.classList.add("antes");
   } 
   else if (valor >= 100 && valor <= 300) {
@@ -27,15 +27,15 @@ function ejecutarEjercicio() {
     resultado.classList.add("rango1");
   } 
   else if (valor > 300 && valor < 500) {
-    resultado.textContent = `⚠️ El valor ${valor} está entre los rangos (no válido).`;
+    resultado.textContent = ` El valor ${valor} está entre los rangos (no válido).`;
     resultado.classList.add("entre");
   } 
   else if (valor >= 500 && valor <= 800) {
-    resultado.textContent = `💡 El valor ${valor} pertenece al segundo rango (500–800).`;
+    resultado.textContent = ` El valor ${valor} pertenece al segundo rango (500–800).`;
     resultado.classList.add("rango2");
   } 
   else {
-    resultado.textContent = `🚀 El valor ${valor} supera los rangos establecidos.`;
+    resultado.textContent = ` El valor ${valor} supera los rangos establecidos.`;
     resultado.classList.add("supera");
   }
 }
