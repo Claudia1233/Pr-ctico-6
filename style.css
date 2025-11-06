@@ -1,0 +1,106 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e9eef5;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  border: 1px solid #c9d2e0;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  width: 400px;
+  text-align: left;
+  padding: 20px 25px;
+}
+
+h2 {
+  color: #0077c8;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.instrucciones {
+  background-color: #e7f6ef;
+  border: 1px solid #b4dfc4;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+
+.instrucciones h3 {
+  margin: 0 0 8px 0;
+  color: #1b7b56;
+}
+
+button {
+  background-color: #1e88e5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.2s;
+  display: block;
+  margin: 10px auto;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+.resultado {
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  display: none;
+}
+
+/* 🎨 Clases para cada tipo de resultado */
+.antes {
+  background-color: #fef6e4;
+  border: 1px solid #f5d882;
+  color: #b76e00;
+}
+
+.rango1 {
+  background-color: #e6ffed;
+  border: 1px solid #b6e8c1;
+  color: #155724;
+}
+
+.entre {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+}
+
+.rango2 {
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
+  color: #0c5460;
+}
+
+.supera {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 13px;
+  color: #5f6368;
+}
