@@ -1,18 +1,18 @@
 // Ejercicio 06 - Clasificación de valor en múltiples categorías
-// Autor: Claudia (2025)
+// Autor: Claudia
 
+// Esperar a que el HTML esté cargado
 document.addEventListener("DOMContentLoaded", () => {
   const boton = document.getElementById("btn-ejecutar");
   const resultado = document.getElementById("resultado");
 
+  // Verificación: mostrar en consola si el script se cargó correctamente
+  console.log(" script.js cargado correctamente");
+
   boton.addEventListener("click", () => {
-    // Limpiar clases previas
-    resultado.className = "resultado";
-
-    // Generar número aleatorio entre 1 y 1000
-    const valor = Math.floor(Math.random() * 1000) + 1;
-    console.log("Valor generado:", valor);
-
+    resultado.className = "resultado"; // limpiar estilos anteriores
+    const valor = Math.floor(Math.random() * 1000) + 1; // genera entre 1 y 1000
+    console.log(" Valor generado:", valor);
     resultado.style.display = "block";
 
     if (valor < 100) {
@@ -33,4 +33,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 
