@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicio 06 - Clasificación por rangos</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prueba rápida - Ejercicio 06</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;background:#e9eef5;margin:0;padding:20px}
+    .tarjeta{max-width:480px;margin:40px auto;background:#fff;padding:20px;border-radius:10px;border:1px solid #c9d2e0}
+    button{background:#1e88e5;color:#fff;border:none;padding:10px 16px;border-radius:6px;cursor:pointer}
+    .resultado{display:none;padding:10px;margin-top:12px;border-radius:6px;font-weight:bold}
+    .antes{background:#fef6e4;border:1px solid #f5d882;color:#b76e00}
+    .rango1{background:#e6ffed;border:1px solid #b6e8c1;color:#155724}
+    .entre{background:#fff3cd;border:1px solid #ffeeba;color:#856404}
+    .rango2{background:#d1ecf1;border:1px solid #bee5eb;color:#0c5460}
+    .supera{background:#f8d7da;border:1px solid #f5c6cb;color:#721c24}
+  </style>
 </head>
 <body>
-
-  <div class="contenedor">
-    <div class="tarjeta">
-      <h2> Ejercicio 06: Clasificar valores según rangos</h2>
-
-      <div class="instrucciones">
-        <h3> Instrucciones</h3>
-        <p>
-          Este ejercicio clasifica un número aleatorio dentro de cinco posibles categorías:<br>
-          “Antes de los rangos”, “Primer rango (100–300)”, “Entre los rangos (no válido)”,
-          “Segundo rango (500–800)” o “Supera los rangos”.<br><br>
-          Usa una cadena de <strong>if - else if - else</strong> y cambia el estilo del mensaje con <strong>classList</strong>.
-        </p>
-      </div>
-
-      <button id="btn-ejecutar">Ejecutar Ejercicio</button>
-      <div id="resultado" class="resultado"></div>
-    </div>
+  <div class="tarjeta">
+    <h2>Prueba rápida - Ejercicio 06</h2>
+    <p>Presioná el botón para generar un valor aleatorio y ver la clasificación.</p>
+    <button id="btn-ejecutar">Ejecutar Ejercicio</button>
+    <div id="resultado" class="resultado"></div>
   </div>
 
-  <footer>
-    Curso de JavaScript - Estructuras de Control | Ejercicio 06
-  </footer>
-
-  <!--  MUY IMPORTANTE: el script va justo antes del cierre del body -->
-  <script src="script.js"></script>
+  <script>
+    console.log("script inline: cargado"); // <-- Si esto no aparece, el navegador no ejecuta JS
+    document.getElementById("btn-ejecutar").addEventListener("click", function () {
+      const r = document.getElementById("resultado");
+      r.className = "resultado";
+      const valor = Math.floor(Math.random() * 1000) + 1;
+      console.log("Valor generado (inline):", valor);
+      r.style.display = "block";
+      if (valor < 100) { r.textContent = ` ${valor} antes de los rangos`; r.classList.add("antes"); }
+      else if (valor >= 100 && valor <= 300) { r.textContent = ` ${valor} primer rango 100-300`; r.classList.add("rango1"); }
+      else if (valor > 300 && valor < 500) { r.textContent = ` ${valor} entre rangos (no válido)`; r.classList.add("entre"); }
+      else if (valor >= 500 && valor <= 800) { r.textContent = ` ${valor} segundo rango 500-800`; r.classList.add("rango2"); }
+      else { r.textContent = ` ${valor} supera los rangos`; r.classList.add("supera"); }
+    });
+  </script>
 </body>
 </html>
+
